@@ -1,1 +1,14 @@
-<p>indicator-list works!</p>
+<h1>indicator-list works!</h1>
+<div *ngIf="items.length > 0; else noItems">
+    <ul>
+        <li *ngFor="let item of items">
+            <h2>{{ item.name }}</h2>
+            <p>{{ item.description }}</p>
+            <!-- Add more fields as necessary -->
+        </li>
+    </ul>
+</div>
+  
+<ng-template #noItems>
+    <p>No items available.</p>
+</ng-template>
