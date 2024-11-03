@@ -8,7 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-add-edit-indicators',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './add-edit-indicators.component.html',
   styleUrl: './add-edit-indicators.component.css'
 })
@@ -25,9 +25,9 @@ export class AddEditIndicatorsComponent {
   ) {
     this.itemForm = this.fb.group({
       name: ['', Validators.required],
-      description: ['', Validators.required],
-      price: ['', [Validators.required, Validators.min(0)]]
-      // Add more fields as necessary
+      expected_value: ['', Validators.required, Validators.min(0)],
+      min_value: ['', [Validators.required, Validators.min(0)]],
+      max_value: ['', [Validators.required, Validators.min(0)]] 
     });
   }
 
@@ -52,12 +52,12 @@ export class AddEditIndicatorsComponent {
 
     if (this.isEditMode) {
       this.indicatorService.updateIndicator(this.id!, itemData).subscribe(
-        () => this.router.navigate(['/']),
+        () => this.router.navigate(['/indicators']),
         error => console.error('Error updating item', error)
       );
     } else {
       this.indicatorService.createIndicator(itemData).subscribe(
-        () => this.router.navigate(['/']),
+        () => this.router.navigate(['/indicators']),
         error => console.error('Error creating item', error)
       );
     }

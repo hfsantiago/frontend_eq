@@ -1,6 +1,6 @@
 <form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
     <div>
-        <label for="name">Name</label>
+        <label for="name">Nombre</label>
         <input id="name" formControlName="name" />
         <div *ngIf="itemForm.get('name')?.invalid && itemForm.get('name')?.touched">
         Name is required.
@@ -8,18 +8,26 @@
     </div>
 
     <div>
-        <label for="description">Description</label>
-        <textarea id="description" formControlName="description"></textarea>
-        <div *ngIf="itemForm.get('description')?.invalid && itemForm.get('description')?.touched">
-        Description is required.
+        <label for="expected_value">Valor Esperado</label>
+        <input id="expected_value" type="number" formControlName="expected_value" />
+        <div *ngIf="itemForm.get('expected_value')?.invalid && itemForm.get('expected_value')?.touched">
+            Valor Esperado es Requerido.
         </div>
     </div>
 
     <div>
-        <label for="price">Price</label>
-        <input id="price" type="number" formControlName="price" />
-        <div *ngIf="itemForm.get('price')?.invalid && itemForm.get('price')?.touched">
-        Price must be a positive number.
+        <label for="min_value">Valor Mínimo</label>
+        <input id="min_value" type="number" formControlName="min_value" />
+        <div *ngIf="itemForm.get('min_value')?.invalid && itemForm.get('min_value')?.touched">
+            Valor Mínimo es Requerido.
+        </div>
+    </div>
+
+    <div>
+        <label for="max_value">Valor Máximo</label>
+        <input id="max_value" type="number" formControlName="max_value" />
+        <div *ngIf="itemForm.get('max_value')?.invalid && itemForm.get('max_value')?.touched">
+            Valor Mínimo es Requerido.
         </div>
     </div>
 
