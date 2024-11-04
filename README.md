@@ -38,7 +38,6 @@ Inicialmente es construida en el frontend con **Angular**  🔻
 
 2. Accede a la raiz del proyecto desde la terminal e instala las dependencias.
 
-
 `npm install`
 
 ### Ejecucion Local del proyecto. 💻
@@ -46,4 +45,4 @@ Inicialmente es construida en el frontend con **Angular**  🔻
  
 1. Necesitas abrir una terminal de linea de comando, para desplegar el servidor localmente a través del siguiente comando:
 
-`ng serve`
+`npm start`
