@@ -20,10 +20,9 @@ Inicialmente es construida en el frontend con **Angular**  🔻
 	 - [NVM](https://github.com/nvm-sh/nvm) `Node Version Manager` `v1.1.12`
 	 - [Node](https://nodejs.org/en/) `v23.1.0`
 	 - [Npm](https://www.npmjs.com/) `v10.9.0`
-	 - 
  
  
-⚠️ **NOTA**: Se recomienda instalar **NVM** ya que esto facilitará la gestión de las versiones de **node.js** y su posterior instalación
+⚠️ **NOTA**: Se recomienda instalar **NVM** ya que esto facilitará la gestión de las versiones de **node.js** y su posterior instalación.
 
 
 ### Herramientas/Recursos. 🛠️
