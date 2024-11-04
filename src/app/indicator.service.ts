@@ -26,4 +26,10 @@ export class IndicatorService {
   updateIndicator(id: string, itemData: any): Observable<any> {
     return this.http.put<any>(`${this.apiUrl}/${id}`, itemData);
   }
+
+  deleteIndicator(id: string): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}/${id}`);
+  }
+
+
 }

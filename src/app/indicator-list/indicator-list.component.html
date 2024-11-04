@@ -1,11 +1,13 @@
+<section class="indicators-list">
 <h1>Indicator List</h1>
-<button (click)="navigateToNewIndicator()">Agregar Indicador</button>
+<button  class="add-button" (click)="navigateToNewIndicator()">Agregar Indicador</button>
 <div *ngIf="items.length > 0; else noItems">
     <ul>
         <li *ngFor="let item of items">
-            <h2>{{ item.name }}</h2>
-            <p>{{ item.description }}</p>
-            <!-- Add more fields as necessary -->
+            <a [routerLink]="['/indicators/edit/', item.id]"><h2>{{ item.name }}</h2></a>
+            <!-- <h2>Valor esperado</h2>
+            <h2>Valor mínimo</h2>
+            <h2>Valor máximo</h2> -->
         </li>
     </ul>
 </div>
@@ -13,3 +15,4 @@
 <ng-template #noItems>
     <p>No items available.</p>
 </ng-template>
+</section>

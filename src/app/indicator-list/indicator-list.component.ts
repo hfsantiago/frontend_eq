@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { IndicatorService } from '../indicator.service';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-indicator-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './indicator-list.component.html',
   styleUrl: './indicator-list.component.css'
 })

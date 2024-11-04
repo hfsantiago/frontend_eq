@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IndicatorListComponent } from './indicator-list/indicator-list.component';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +11,10 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'frontend-eq';
+
+  constructor(private router: Router) {}
+
+  navigateToOtherRoute() {
+    this.router.navigate(['/indicators']);
+  }  
 }

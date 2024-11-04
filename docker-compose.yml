@@ -1,0 +1,16 @@
+# version: '2.30.1'
+services:
+  app:
+    image: node:23.1.0
+    networks:
+      - crm
+    ports:
+      - 4200:4200
+    working_dir: /home/node/app
+    volumes:
+      - ./:/home/node/app
+    command: 'npm start'
+
+networks:
+  crm:
+    driver: bridge

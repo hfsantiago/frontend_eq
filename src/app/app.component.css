@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'calibri';
+}
+
+
+h1 {
+    /* border: 1px solid red; */
+    margin-top: 150px;
+    text-align: center;
+    color: #1f54c5;
+  }

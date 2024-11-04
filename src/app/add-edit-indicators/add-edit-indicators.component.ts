@@ -26,8 +26,8 @@ export class AddEditIndicatorsComponent {
     this.itemForm = this.fb.group({
       name: ['', Validators.required],
       expected_value: ['', Validators.required, Validators.min(0)],
-      min_value: ['', [Validators.required, Validators.min(0)]],
-      max_value: ['', [Validators.required, Validators.min(0)]] 
+      min_value: ['', Validators.required, Validators.min(0)],
+      max_value: ['', Validators.required, Validators.min(0)]
     });
   }
 
@@ -37,13 +37,17 @@ export class AddEditIndicatorsComponent {
 
     if (this.isEditMode) {
       this.indicatorService.getIndicatorById(this.id!).subscribe(
-        data => this.itemForm.patchValue(data),
+        data => {
+          this.itemForm.patchValue(data);
+          console.log(data);
+        },
         error => console.error('Error loading item', error)
       );
     }
   }
 
   onSubmit(): void {
+    console.log(this.itemForm)
     if (this.itemForm.invalid) {
       return;
     }
@@ -63,5 +67,11 @@ export class AddEditIndicatorsComponent {
     }
   }
 
-
+  deleteIndicator(idToDelete: string | null): void {
+    if (idToDelete) {
+      this.indicatorService.deleteIndicator(idToDelete).subscribe(() => {
+        this.router.navigate(['/indicators']);
+      });
+    }
+  }
 }

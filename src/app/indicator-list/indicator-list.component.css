@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'calibri';
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.add-button {
+    width: 100%;
+    border: none;
+    margin-top: 15px;
+    padding: 12px;
+    color: white;
+    background: #1f54c5;
+    font-size: 16px;
+    }
+
+.indicators-list {
+    width: 400px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    box-shadow: 7px 13px 37px #000;
+}
