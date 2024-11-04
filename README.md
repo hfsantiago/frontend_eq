@@ -15,8 +15,13 @@ Inicialmente es construida en el frontend con **Angular**  🔻
 ### Uso de Tecnologias. 🧑🏽‍💻
 
   
- - **Entorno de desarrollo Frontend creado con**: [Angular](https://angular.dev/).
- - **Otras tecnologías necesarias**: [NVM](https://github.com/nvm-sh/nvm) Node Version Manager
+ - **Entorno de desarrollo Frontend creado con**: [Angular](https://angular.dev/). `v18.2.10`
+ - **Otras**:  
+	 - [NVM](https://github.com/nvm-sh/nvm) `Node Version Manager` `v1.1.12`
+	 - [Node](https://nodejs.org/en/) `v23.1.0`
+	 - [Npm](https://www.npmjs.com/) `v10.9.0`
+	 - 
+ 
  
 ⚠️ **NOTA**: Se recomienda instalar **NVM** ya que esto facilitará la gestión de las versiones de **node.js** y su posterior instalación
 
@@ -46,6 +51,7 @@ Inicialmente es construida en el frontend con **Angular**  🔻
 1. Necesitas abrir una terminal de linea de comando, para desplegar el servidor localmente a través del siguiente comando:
 
 `npm start`
+
 
 
 # FrontendEq
