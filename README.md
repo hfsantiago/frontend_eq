@@ -53,6 +53,17 @@ Inicialmente es construida en el frontend con **Angular**  🔻
 
 
 
+## Docker 🐋 
+1. En las consola local de la carpeta raiz del proyecto ejecute el siguiente comando:
+
+  `docker compose up -d`
+  
+2. Una vez los contenedores estén arriba ingrese a la consola del proyecto en el docker desktop y ejecute los sigueintes comandos
+
+`npm start`
+
+
+
 
 
 # FrontendEq
