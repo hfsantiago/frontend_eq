@@ -2,7 +2,7 @@
     <form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
         <h4>Registro Indicador</h4>
         <div class="field">
-            <!-- <label for="name">Nombre</label> -->
+            <label for="name">Nombre</label>
             <input class="field-son" id="name" formControlName="name" placeholder="Nombre del Indicador" />
             <div *ngIf="itemForm.get('name')?.invalid && itemForm.get('name')?.touched">
             Name is required.
@@ -10,7 +10,7 @@
         </div>
 
         <div class="field">
-            <!-- <label for="expected_value">Valor Esperado</label> -->
+            <label for="expected_value">Valor Esperado</label>
             <input class="field-son" id="expected_value" type="number" formControlName="expected_value" placeholder="Ingrese Valor Esperado"/>
             <div class="field-son-if" *ngIf="itemForm.get('expected_value')?.invalid && itemForm.get('expected_value')?.touched">
                 Valor Esperado es Requerido.
@@ -18,7 +18,7 @@
         </div>
 
         <div class="field">
-            <!-- <label for="min_value">Valor Mínimo</label> -->
+            <label for="min_value">Valor Mínimo</label>
             <input class="field-son" id="min_value" type="number" formControlName="min_value" placeholder="Ingrese Valor Máximo" />
             <div *ngIf="itemForm.get('min_value')?.invalid && itemForm.get('min_value')?.touched">
                 Valor Mínimo es Requerido.
@@ -26,14 +26,14 @@
         </div>
 
         <div class="field">
-            <!-- <label for="max_value">Valor Máximo</label> -->
+            <label for="max_value">Valor Máximo</label>
             <input class="field-son" id="max_value" type="number" formControlName="max_value" placeholder="Ingrese Valor Mínimo" />
             <div *ngIf="itemForm.get('max_value')?.invalid && itemForm.get('max_value')?.touched">
                 Valor Máximo es Requerido.
             </div>
         </div>
 
-        <button class="create-button" type="submit" [disabled]="itemForm.invalid">
+        <button class="" type="submit" [disabled]="itemForm.invalid">
             {{ isEditMode ? 'Actualizar' : 'Crear' }} Indicador
         </button>
 
