@@ -1,17 +1,16 @@
+# version: '2.30.1'
 services:
-  app-eq:
+  app:
     image: node:23.1.0
     networks:
-      - eq
+      - crm
     ports:
       - 4200:4200
     working_dir: /home/node/app
-    environment:
-      - NODE_NO_WARNINGS=1
     volumes:
       - ./:/home/node/app
-    command: tail -f /dev/null 
+    command: 'npm start'
 
 networks:
-  eq:
+  crm:
     driver: bridge
